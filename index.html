@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tokuma Secondary School – STEM HUB CLUB project 350+</title>
+<style>
+:root{--bg:#eef2fb;--card:#fff;--tx:#14213d;--mu:#6b7794;--pr:#4f46e5;--pr2:#06b6d4;--ok:#15803d;--bad:#dc2626;--bd:#e2e8f5;--sh:0 8px 28px rgba(40,60,140,.10);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--card:#151d36;--tx:#e8edf8;--mu:#97a3c2;--pr:#818cf8;--pr2:#22d3ee;--ok:#4ade80;--bad:#f87171;--bd:#26315a;--sh:0 8px 28px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 400px at 10% -10%,rgba(79,70,229,.18),transparent),radial-gradient(800px 400px at 100% 0,rgba(6,182,212,.16),transparent),var(--bg);color:var(--tx);font:15px/1.55 "Segoe UI",system-ui,Arial,sans-serif;min-height:100vh}
+header{background:linear-gradient(120deg,var(--pr),var(--pr2));color:#fff;padding:22px 16px;text-align:center;box-shadow:var(--sh)}
+header b{display:block;font-size:22px;font-weight:800;letter-spacing:1px}header span{font-size:12px;opacity:.9;letter-spacing:2px}
+main{max-width:920px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:var(--sh);animation:up .4s ease both}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h2,h3{margin:.2em 0 .5em}.mu{color:var(--mu);font-size:13px}
+input,select,textarea,button{font:inherit;color:var(--tx);background:var(--bg);border:1.5px solid var(--bd);border-radius:10px;padding:10px 12px;width:100%;margin:4px 0;outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--pr);box-shadow:0 0 0 3px rgba(79,70,229,.18)}
+button{width:auto;background:linear-gradient(120deg,var(--pr),var(--pr2));color:#fff;border:0;cursor:pointer;padding:10px 18px;font-weight:600;box-shadow:0 4px 12px rgba(79,70,229,.3)}button:hover{transform:translateY(-1px)}
+button.g{background:var(--bg);color:var(--tx);border:1.5px solid var(--bd);box-shadow:none}button.r{background:var(--bad);box-shadow:none}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}nav button{background:var(--card);color:var(--tx);border:1.5px solid var(--bd);box-shadow:none;border-radius:30px}nav button.on{background:linear-gradient(120deg,var(--pr),var(--pr2));color:#fff;border:0}
+.cdc{background:linear-gradient(135deg,#1e1b4b,#312e81 55%,#0e7490);color:#fff;border:0}.cdc .mu{color:#c7d2fe}
+.cd{display:flex;gap:10px;justify-content:center;margin-top:8px}.cd div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:10px 6px;min-width:70px;text-align:center;backdrop-filter:blur(6px)}.cd b{font-size:30px;display:block;font-variant-numeric:tabular-nums}.cd span{color:#c7d2fe;font-size:12px}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:130px}
+.stat h2{font-size:30px;margin:0;background:linear-gradient(120deg,var(--pr),var(--pr2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.opt{display:block;padding:11px 12px;border:1.5px solid var(--bd);border-radius:12px;margin:7px 0;cursor:pointer;transition:.15s}.opt:hover{border-color:var(--pr)}.opt.sel{border-color:var(--pr);background:rgba(79,70,229,.12)}.opt.ok{border-color:var(--ok);background:rgba(21,128,61,.14)}.opt.no{border-color:var(--bad);background:rgba(220,38,38,.12)}
+.bar{height:10px;background:var(--bd);border-radius:6px;overflow:hidden;margin-bottom:8px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--pr),var(--pr2));border-radius:6px}
+.tag{display:inline-block;background:rgba(79,70,229,.1);color:var(--pr);border-radius:20px;padding:2px 11px;font-size:12px;font-weight:600;margin-right:5px}
+#timer{position:sticky;top:env(safe-area-inset-top,0px);background:linear-gradient(120deg,#dc2626,#f97316);color:#fff;padding:10px;text-align:center;font-weight:700;font-size:17px;border-radius:12px;z-index:5;margin-bottom:12px}
+.drop{display:block;border:2px dashed var(--pr);border-radius:16px;padding:26px 12px;text-align:center;cursor:pointer;background:rgba(79,70,229,.06);transition:.2s;margin:8px 0}.drop:hover,.drop.on{background:rgba(79,70,229,.14);transform:scale(1.01)}.drop big{font-size:38px;display:block}.drop input{display:none}
+.hero{background:linear-gradient(135deg,rgba(79,70,229,.14),rgba(6,182,212,.14))}
+.rk{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;border:1px solid var(--bd);margin:8px 0;background:var(--bg)}.rk.me{border-color:var(--pr);box-shadow:0 0 0 2px rgba(79,70,229,.25)}
+.rn{font-size:22px;min-width:40px;text-align:center;font-weight:800}.av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--pr),var(--pr2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+.rm{flex:1;min-width:0}.rm b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rs{font-size:20px;font-weight:800;color:var(--pr)}
+#ethd{margin-top:8px;display:inline-block;background:rgba(255,255,255,.18);padding:3px 14px;border-radius:20px;font-size:13px;letter-spacing:0}
+.tg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tile{aspect-ratio:1;border-radius:20px;color:#fff;padding:14px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;box-shadow:var(--sh);transition:.2s;position:relative;overflow:hidden;animation:up .4s ease both}
+.tile:active{transform:scale(.96)}.tile:before{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.15)}
+.ti{font-size:46px;text-align:right;position:relative}.tl{font-weight:800;font-size:17px;line-height:1.2;position:relative}.tc{font-size:12px;background:rgba(255,255,255,.22);padding:2px 10px;border-radius:12px;align-self:flex-start;position:relative}
+.dev{margin-top:10px;font-size:12.5px;opacity:.95}.dev b{display:inline;font-size:inherit;letter-spacing:0}
+.nosel{user-select:none;-webkit-user-select:none}.hide{display:none}
+</style>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script></head><body>
+<header><b>🎓 Tokuma Secondary School<br>STEM HUB CLUB project 350+</b><span>EXAM PRACTICE · UEE COUNTDOWN</span><div><div id="ethd">📅 Today: Meskerem 28, 2019 E.C.  (28/1/2019)</div></div><div class="dev">👨‍💻 Developer: <b>Bilal Abiyu</b> · Future Machine Learning Engineer</div></header>
+<main>
+<div class="card cdc"><div class="mu" style="text-align:center">⏳ Time left until the University Entrance Exam</div><div class="cd" id="cd"><div><b>269</b><span class="mu">Days</span></div><div><b>4</b><span class="mu">Hours</span></div><div><b>6</b><span class="mu">Min</span></div><div><b>38</b><span class="mu">Sec</span></div></div></div>
+<div id="app"><div class="card"><h2>⚠️ Open the online link</h2><div class="mu">Google sign-in does not work from a downloaded file. Your config is saved. Download the ready file below, upload it to Netlify Drop (app.netlify.com/drop), and open the https link it gives you.<p><button onclick="dlReady()">⬇️ Download ready file (index.html)</button> <button class="g" onclick="resetCfg()">Change config</button></p></div></div></div>
+</main>
+<script>
+const EXAM_DATE=new Date("2027-07-04T12:00:00").getTime();
+const $=s=>document.querySelector(s), app=$("#app");
+const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let db,user,uid,isAdmin=false,me={},tab="home",exams=[],attempts={},logs=[],reqs=[],approved=null,live=null,tick=null;
+
+
+/* Ethiopian calendar */
+const EM=["Meskerem","Tikimt","Hidar","Tahsas","Tir","Yekatit","Megabit","Miazia","Ginbot","Sene","Hamle","Nehase","Pagume"];
+const g2j=(y,m,d)=>{const a=Math.floor((14-m)/12),y2=y+4800-a,m2=m+12*a-3;return d+Math.floor((153*m2+2)/5)+365*y2+Math.floor(y2/4)-Math.floor(y2/100)+Math.floor(y2/400)-32045};
+const j2g=j=>{const a=j+32044,b=Math.floor((4*a+3)/146097),c=a-Math.floor(146097*b/4),d=Math.floor((4*c+3)/1461),e=c-Math.floor(1461*d/4),m=Math.floor((5*e+2)/153);return[100*b+d-4800+Math.floor(m/10),m+3-12*Math.floor(m/10),e-Math.floor((153*m+2)/5)+1]};
+const j2e=j=>{const r=(j-1723856)%1461,n=(r%365)+365*Math.floor(r/1460);return[4*Math.floor((j-1723856)/1461)+Math.floor(r/365)-Math.floor(r/1460),Math.floor(n/30)+1,(n%30)+1]};
+const e2j=(y,m,d)=>1723856+365+365*(y-1)+Math.floor(y/4)+30*m+d-31;
+const ethOf=dt=>j2e(g2j(dt.getFullYear(),dt.getMonth()+1,dt.getDate()));
+const ethTxt=e=>EM[e[1]-1]+" "+e[2]+", "+e[0]+" E.C.";
+const ethIso=iso=>{const p=iso.split("-").map(Number);return ethTxt(j2e(g2j(p[0],p[1],p[2])))};
+const isoOfEth=(y,m,d)=>{const g=j2g(e2j(y,m,d));return g[0]+"-"+String(g[1]).padStart(2,"0")+"-"+String(g[2]).padStart(2,"0")};
+function setEthDate(){const e=ethOf(new Date());$("#ethd").textContent="📅 Today: "+ethTxt(e)+"  ("+e[2]+"/"+e[1]+"/"+e[0]+")"}
+
+/* countdown */
+function cd(){let d=Math.max(0,EXAM_DATE-Date.now()),s=Math.floor(d/1e3);
+ const v=[["Days",Math.floor(s/86400)],["Hours",Math.floor(s%86400/3600)],["Min",Math.floor(s%3600/60)],["Sec",s%60]];
+ $("#cd").innerHTML=v.map(x=>`<div><b>${x[1]}</b><span class="mu">${x[0]}</span></div>`).join("")}
+cd();setEthDate();setInterval(cd,1000);setInterval(setEthDate,60000);
+
+/* boot */
+const ADMIN_EMAIL="bilalabiyu025@gmail.com";let local=true,ready=false,authEmail="",auth;
+/* ===== PASTE YOUR FIREBASE CONFIG HERE (see SETUP-GUIDE.md) ===== */
+const firebaseConfig={"apiKey":"AIzaSyBAFetdGGz-VI7Xf577bGH3eyS6C6S2NNY","authDomain":"stem-hub-club.firebaseapp.com","projectId":"stem-hub-club","storageBucket":"stem-hub-club.firebasestorage.app","messagingSenderId":"957031854104","appId":"1:957031854104:web:55c4f66d50cf3dd9d1136d"};
+function loginView(){
+ app.innerHTML=`<div class="card" style="text-align:center"><h2>🔐 Sign in</h2><div class="mu">Sign in with your Google (Gmail) account to enter the system.</div><p><button onclick="gsign()">Sign in with Google</button></p></div>`}
+function gsign(){auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(e=>alert("Sign-in failed: "+e.message))}
+function logout(){auth.signOut().then(()=>location.reload())}
+function setupView(){app.innerHTML=`<div class="card"><h2>⚙️ Setup — paste your Firebase config</h2><div class="mu">Firebase console → Project settings → Your apps → Web app → copy the whole <b>firebaseConfig</b> block and paste it here.</div>
+ <textarea id="cfg" rows="9" placeholder='const firebaseConfig = {\n  apiKey: "...",\n  authDomain: "...",\n  projectId: "...",\n  ...\n};'></textarea><button onclick="mkFile()">⬇️ Create my ready file (index.html)</button>
+ <div class="mu" style="margin-top:8px">The downloaded index.html already contains your config. Upload that file to Netlify Drop (see guide), and give the link to all students.</div></div>`}
+function buildFile(c){let h="<!DOCTYPE html>\n"+document.documentElement.outerHTML;const h2=h.replace(/const firebaseConfig=\{[^}]*\};/,()=>"const firebaseConfig="+JSON.stringify(c)+";");
+ if(h2===h){alert("Could not build the file.");return false}
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([h2],{type:"text/html"}));a.download="index.html";document.body.appendChild(a);a.click();a.remove();return true}
+function dlReady(){try{buildFile(JSON.parse(localStorage.getItem("stemhub_cfg")))}catch(e){alert("Config not found. Press 'Change config' first.")}}
+function resetCfg(){localStorage.removeItem("stemhub_cfg");setupView()}
+function mkFile(){const t=$("#cfg").value,c={};
+ ["apiKey","authDomain","projectId","storageBucket","messagingSenderId","appId","measurementId"].forEach(k=>{const m=t.match(new RegExp("[\"']?"+k+"[\"']?\\s*:\\s*[\"'`]([^\"'`]+)[\"'`]"));if(m)c[k]=m[1]});
+ if(!c.apiKey||!c.projectId||!c.appId)return alert("Could not read the config. Paste the whole firebaseConfig block exactly as Firebase shows it (it must contain apiKey, projectId and appId).");
+ try{localStorage.setItem("stemhub_cfg",JSON.stringify(c))}catch(e){}
+ if(!buildFile(c))return;
+ app.innerHTML=`<div class="card"><h2>✅ Config saved</h2>Your file <b>index.html</b> was downloaded (check your Downloads folder). Upload that file to Netlify Drop and share the link with students.<p><button onclick="boot()">▶️ Continue on this device</button></p><div class="mu">Note: Google sign-in only works from the online https link, not from a downloaded file.</div></div>`}
+let dberr="";
+const fail=e=>{dberr=(e.code||"error")+": "+(e.message||e);render()};
+function errCard(m,h){return`<div class="card"><h2>⚠️ ${m}</h2><div class="mu">${h}</div></div>`}
+function boot(){try{
+ let cfg=firebaseConfig;if(cfg.apiKey.startsWith("PASTE")){try{cfg=JSON.parse(localStorage.getItem("stemhub_cfg"))||cfg}catch(e){}}
+ if(cfg.apiKey.startsWith("PASTE"))return setupView();
+ if(!/^https?:$/.test(location.protocol))return app.innerHTML=errCard("Open the online link","Google sign-in does not work from a downloaded file. Your config is saved. Download the ready file below, upload it to Netlify Drop (app.netlify.com/drop), and open the https link it gives you.<p><button onclick='dlReady()'>⬇️ Download ready file (index.html)</button> <button class='g' onclick='resetCfg()'>Change config</button></p>");
+ if(typeof firebase==="undefined")return app.innerHTML=errCard("Could not load Firebase","Check your internet connection and reload the page.");
+ firebase.initializeApp(cfg);auth=firebase.auth();db=firebase.firestore();
+ auth.onAuthStateChanged(u=>{if(!u){uid=null;return loginView()}start(u)},e=>app.innerHTML=errCard("Sign-in error",esc(e.message)));
+ setTimeout(()=>{if(app.textContent.trim()=="Loading…")app.innerHTML=errCard("Still loading…","Check: (1) Authentication → Google is Enabled, (2) Firestore Database is created, (3) your Netlify domain is in Authorized domains, (4) the Rules are published. Then reload.")},10000)
+ }catch(e){app.innerHTML=errCard("Startup error",esc(e.message||e))}}
+function start(u){
+ uid=u.uid;authEmail=(u.email||"").toLowerCase();isAdmin=u.emailVerified&&authEmail===ADMIN_EMAIL;
+ db.collection("requests").doc(uid).onSnapshot(s=>{me=s.exists?s.data():{};ready=true;syncBoard();render()},fail);
+ db.collection("exams").onSnapshot(q=>{exams=q.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
+ db.collection("attempts/"+uid+"/items").onSnapshot(q=>{attempts={};q.docs.forEach(d=>attempts[d.id]=d.data());render()},fail);
+ if(isAdmin)db.collection("requests").onSnapshot(q=>{reqs=q.docs.map(d=>({id:d.id,...d.data()}));render()},fail)}
+
+const allowed=()=>isAdmin||(!!me.name&&(me.status===undefined||me.status==="approved"));
+const needPass=()=>!isAdmin&&!!me.pass&&sessionStorage.getItem("unl_"+uid)!=="1";
+
+function render(){
+ if(live||hold)return;
+ if(!uid)return;
+ if(dberr)return app.innerHTML=errCard("Database error",esc(dberr)+"<br>Make sure the Firestore database is created and the Rules from the guide are published.");
+ if(!ready)return app.innerHTML='<div class="card">Loading…</div>';
+ if(!allowed()){
+  if(!me.name)return regView();
+  return app.innerHTML=`<div class="card"><h2>⏳ Waiting for approval</h2>Hello <b>${esc(me.name)}</b>, your registration was received. The admin must approve your account before you can enter. Please come back later.<p><button class="g" onclick="logout()">Log out</button></p></div>`}
+ if(needPass())return passView();
+ const T=[["home","🏠 Dashboard"],["exams","📝 Exams"],["me","👤 Profile"]];if(isAdmin){const pd=reqs.filter(r=>r.status=="pending").length;T.push(["admin","⚙️ Admin"+(pd?" ("+pd+")":"")])};
+ app.innerHTML=`<nav>${T.map(t=>`<button class="${tab==t[0]?"on":""}" onclick="tab='${t[0]}';render()">${t[1]}</button>`).join("")}</nav><div id="v"></div>`;
+ ({home,exams:examsV,plan,me:prof,admin})[tab]();
+}
+let BOARDS={avg:null,target:null},bmode="avg",bfetch={};
+const resetBoard=()=>{BOARDS={avg:null,target:null};localStorage.removeItem("sh_board_avg");localStorage.removeItem("sh_board_target")};
+async function loadBoard(mode){const key="sh_board_"+mode;try{const c=JSON.parse(localStorage.getItem(key)||"null");
+ if(c&&Date.now()-c.t<6e5){BOARDS[mode]=c.l;return setTimeout(render,0)}
+ if(bfetch[mode])return;bfetch[mode]=true;const q=await db.collection("board").orderBy(mode,"desc").limit(50).get();
+ BOARDS[mode]=q.docs.map(d=>({id:d.id,...d.data()}));localStorage.setItem(key,JSON.stringify({t:Date.now(),l:BOARDS[mode]}));bfetch[mode]=false;render()}catch(e){bfetch[mode]=false;BOARDS[mode]=BOARDS[mode]||[];render()}}
+function boardCard(){const m=bmode,B=BOARDS[m];
+ const tabs=`<div style="display:flex;gap:8px;margin-bottom:6px"><button class="${m=="avg"?"":"g"}" onclick="bmode='avg';render()">📝 Exam average</button><button class="${m=="target"?"":"g"}" onclick="bmode='target';render()">🎯 UEE target (Grade 12)</button></div>`;
+ if(B===null){loadBoard(m);return tabs+'<div class="mu">Loading ranking…</div>'}
+ if(!B.length)return tabs+'<div class="mu">'+(m=="avg"?"No exam results yet. Take an exam to enter the ranking.":"No students have set a target yet.")+'</div>';
+ const mine=B.findIndex(x=>x.id==uid);
+ const head=`<div class="mu" style="margin:4px 0">${mine>=0?"Your rank: <b>#"+(mine+1)+"</b>":"You are outside the top 50 (or have no result yet)."}</div>`;
+ return tabs+head+B.map((x,i)=>{const v=m=="avg"?(x.avg||0):(x.target||0),w=m=="avg"?v:v/7;
+  return`<div class="rk ${x.id==uid?"me":""}"><span class="rn">${i<3?["🥇","🥈","🥉"][i]:"#"+(i+1)}</span><span class="av">${esc((x.name||"?").trim().charAt(0).toUpperCase())}</span><div class="rm"><b>${esc(x.name)}${x.id==uid?" (you)":""}</b><div class="mu">Grade ${esc(x.grade)} · Section ${esc(x.section)}${m=="avg"?" · "+(x.exams||0)+" exam(s)":""}</div><div class="bar" style="margin:4px 0 0"><i style="width:${Math.min(100,w)}%"></i></div></div><span class="rs">${m=="avg"?v+"%":v}</span></div>`}).join("")}
+async function pushBoard(){if(!me.name)return;
+ const sc=Object.values(attempts).filter(a=>a.status=="done"&&typeof a.pct=="number");
+ const d={name:me.name,grade:me.grade,section:me.section,exams:sc.length,at:Date.now()};if(me.target)d.target=me.target;
+ if(sc.length)d.avg=Math.round(sc.reduce((a,x)=>a+x.pct,0)/sc.length*10)/10;
+ try{await db.collection("board").doc(uid).set(d,{merge:true})}catch(e){}resetBoard()}
+async function syncBoard(){if(bsync||!me.name||!allowed())return;bsync=true;try{await db.collection("board").doc(uid).set({name:me.name,grade:me.grade,section:me.section,...(me.target?{target:me.target}:{}),at:Date.now()},{merge:true})}catch(e){}}
+function regView(){app.innerHTML=`<div class="card"><h2>📝 Register</h2><div class="mu">Fill in your details. The admin must approve your account before you can enter.</div>
+ <input id="n" placeholder="Full name"><input id="e" type="email" value="${esc(authEmail)}" readonly>
+ <div class="row"><select id="g" onchange="regGrade()"><option value="">Grade</option><option>9</option><option>10</option><option>11</option><option>12</option></select><select id="s"><option value="">Section</option></select></div>
+ <div class="row"><input id="a1" type="number" min="0" max="100" step="0.1" placeholder="Planned average — Semester 1 (%)"><input id="a2" type="number" min="0" max="100" step="0.1" placeholder="Planned average — Semester 2 (%)"></div>
+ <div id="tw" class="hide"><input id="t" type="number" min="0" max="700" placeholder="Target UEE score (minimum 350)"></div>
+ <div class="mu" style="margin-top:8px">Create a password for this system. ⚠️ Do NOT use your Gmail or any other password you use elsewhere. The admin can see this password.</div>
+ <input id="p1" type="password" placeholder="Password (at least 6 characters)"><input id="p2" type="password" placeholder="Repeat password">
+ <button onclick="reg()">Register</button></div>`}
+function regGrade(){const g=$("#g").value;$("#s").innerHTML='<option value="">Section</option>'+(g=="12"?["A","B","C","D"]:g?["A","B","C","D","E","F","G"]:[]).map(x=>`<option>${x}</option>`).join("");$("#tw").classList.toggle("hide",g!="12")}
+async function reg(){
+ const n=$("#n").value.trim(),e=$("#e").value.trim().toLowerCase(),g=$("#g").value,s=$("#s").value,a1=parseFloat($("#a1").value),a2=parseFloat($("#a2").value),p=$("#p1").value;
+ if(n.length<3||!/^[^@\s]+@gmail\.com$/.test(e)||!g||!s)return alert("Please fill in your name, a Gmail account, grade and section.");
+ if(!(a1>=0&&a1<=100)||!(a2>=0&&a2<=100))return alert("Enter your planned Semester 1 and Semester 2 averages (0–100).");
+ let t=null;
+ if(g=="12"){t=+$("#t").value;if(!(t>0&&t<=700))return alert("Enter your target UEE score (0–700).");
+  if(t<350)return alert("Sorry — Grade 12 students must plan a UEE score of at least 350 to join this club. Please set a higher goal and register again.")}
+ else if(a1<85||a2<85)return alert("Sorry — Grade 9–11 students must plan an average of at least 85 in both semesters to join this club. Please set a higher goal and register again.");
+ if(p.length<6)return alert("The password must be at least 6 characters.");
+ if(p!==$("#p2").value)return alert("The two passwords do not match.");
+ try{await db.collection("requests").doc(uid).set({name:n,email:e,grade:g,section:s,sem1:a1,sem2:a2,target:t,pass:p,status:"pending",at:Date.now()});resetBoard()}catch(x){alert("Could not register: "+x.message)}}
+function passView(){app.innerHTML=`<div class="card"><h2>🔐 Enter your password</h2><div class="mu">Hello ${esc(me.name)}. Enter the password you created when you registered.</div><input id="pw" type="password" placeholder="Password"><button onclick="unlock()">Enter</button> <button class="g" onclick="logout()">Log out</button><div class="mu" style="margin-top:8px">Forgot it? Ask the admin.</div></div>`}
+function unlock(){if($("#pw").value===me.pass){sessionStorage.setItem("unl_"+uid,"1");render()}else alert("Wrong password.")}
+
+/* dashboard */
+function hrs(){return logs.reduce((a,l)=>a+(+l.hours||0),0)}
+function home(){
+ const done=Object.values(attempts).filter(a=>a.status=="done"),sc=done.filter(a=>typeof a.pct=="number"),avg=sc.length?Math.round(sc.reduce((a,x)=>a+x.pct,0)/sc.length)+"%":"—",best=sc.length?Math.max(...sc.map(x=>x.pct))+"%":"—";
+ $("#v").innerHTML=`<div class="card hero"><h2>👋 Welcome, ${esc(me.name||"Admin")}</h2>${isAdmin?'<span class="tag">Admin</span>':`<span class="tag">Grade ${esc(me.grade)}-${esc(me.section)}</span>${me.target?`<span class="tag">Target UEE: ${esc(me.target)}</span>`:`<span class="tag">Plan: Sem1 ${esc(me.sem1)}% · Sem2 ${esc(me.sem2)}%</span>`}`}</div>
+ <div class="row"><div class="card stat"><div class="mu">📝 Exams taken</div><h2>${done.length}</h2></div><div class="card stat"><div class="mu">🏆 Average score</div><h2>${avg}</h2></div><div class="card stat"><div class="mu">⭐ Best score</div><h2>${best}</h2></div></div>
+ <div class="card"><h3>🏆 Ranking <span class="mu">(top 50)</span></h3>${boardCard()}</div>
+ ${myResults()}`}
+function myResults(){const L=Object.entries(attempts).filter(([k,a])=>a.status=="done").sort((a,b)=>(b[1].at||0)-(a[1].at||0));
+ if(!L.length)return"";
+ return`<div class="card"><h3>📋 My exam results</h3>${L.map(([id,a])=>{const e=exams.find(x=>x.id==id);if(!e)return"";
+  const sc=typeof a.pct=="number"?`<b>${a.score!=null&&a.total?a.score+"/"+a.total+" · ":(a.score!=null&&e.q&&e.q.length?a.score+"/"+e.q.length+" · ":"")}${a.pct}%</b>`:"<b>✅ Completed</b>";
+  return`<div style="border-top:1px solid var(--bd);padding:8px 0"><b>${esc(e.title)}</b> <span class="tag">${esc(e.subject)}</span><div>${sc}${e.type!="html"?` <button class="g" style="padding:3px 12px" onclick="tab='exams';render();review('${id}')">Details</button>`:(a.hasSnap?` <button class="g" style="padding:3px 12px" onclick="viewSnap('${id}')">📄 View result</button>`:` <span class="mu">(result view not saved for this exam)</span>`)}</div></div>`}).join("")}</div>`}
+function subjBars(){const m={};logs.forEach(l=>m[l.subject]=(m[l.subject]||0)+(+l.hours||0));const mx=Math.max(1,...Object.values(m));
+ return Object.keys(m).length?Object.entries(m).map(([k,v])=>`<div class="mu">${esc(k)} — ${v.toFixed(1)} h</div><div class="bar"><i style="width:${v/mx*100}%"></i></div>`).join(""):'<span class="mu">No study logged yet.</span>'}
+
+/* study log */
+function plan(){
+ const te=ethOf(new Date());
+ $("#v").innerHTML=`<div class="card"><h3>Write today's study program (Ethiopian calendar)</h3><div class="row"><select id="ed">${Array.from({length:30},(_,i)=>`<option ${i+1==te[2]?"selected":""}>${i+1}</option>`).join("")}</select><select id="emo">${EM.map((n,i)=>`<option value="${i+1}" ${i+1==te[1]?"selected":""}>${n}</option>`).join("")}</select><select id="ey">${[te[0]-1,te[0],te[0]+1].map(y=>`<option ${y==te[0]?"selected":""}>${y}</option>`).join("")}</select><input id="ls" placeholder="Subject (e.g. Physics)"><input id="lh" type="number" step="0.5" min="0" placeholder="Hours studied"></div>
+ <textarea id="lt" rows="3" placeholder="What did you study / plan? (topics, goals, notes)"></textarea><button onclick="addLog()">Save</button></div>
+ <div class="card"><h3>History</h3>${logs.map(l=>`<div style="border-top:1px solid var(--bd);padding:8px 0"><b>${esc(ethIso(l.date))}</b> · ${esc(l.subject)} · ${esc(l.hours)} h <button class="g" style="float:right;padding:2px 10px" onclick="delLog('${l.id}')">Delete</button><div class="mu">${esc(l.note)}</div></div>`).join("")||'<span class="mu">Empty.</span>'}</div>`}
+async function addLog(){const ey=+$("#ey").value,emo=+$("#emo").value,ed=+$("#ed").value;if(emo==13&&ed>(ey%4==3?6:5))return alert("Pagume has only "+(ey%4==3?6:5)+" days this year.");
+ const l={date:isoOfEth(ey,emo,ed),subject:$("#ls").value.trim(),hours:+$("#lh").value,note:$("#lt").value.trim()};
+ if(!l.date||!l.subject||!(l.hours>0))return alert("Enter date, subject and hours.");
+ await db.collection("logs/"+uid+"/items").doc("l"+Date.now()).set(l)}
+const delLog=id=>db.collection("logs/"+uid+"/items").doc(id).delete();
+
+function prof(){$("#v").innerHTML=`<div class="card"><h3>👤 ${esc(me.name||"Admin")}</h3><div class="mu">${esc(me.email||authEmail)}</div>${isAdmin?'<span class="tag">Admin</span>':`<span class="tag">Grade ${esc(me.grade)}-${esc(me.section)}</span><span class="tag">Sem1 ${esc(me.sem1)}%</span><span class="tag">Sem2 ${esc(me.sem2)}%</span>${me.target?`<span class="tag">UEE ${esc(me.target)}</span>`:""}`}<p><button class="g" onclick="logout()">Log out</button></p></div>${isAdmin?"":`<div class="card"><h3>🔑 Change password</h3><input id="cp1" type="password" placeholder="New password (at least 6 characters)"><button onclick="chPass()">Save password</button></div>`}`}
+async function chPass(){const p=$("#cp1").value;if(p.length<6)return alert("The password must be at least 6 characters.");try{await db.collection("requests").doc(uid).update({pass:p});alert("Password changed.")}catch(e){alert("Could not change: "+e.message)}}
+
+/* exams list */
+function examCards(list){return list.length?list.map(e=>{const a=attempts[e.id];return`<div class="card"><h3>${esc(e.title)}</h3><span class="tag">${esc(e.subject)}</span><span class="tag">${esc(e.minutes)} min</span>${e.type=="html"?'<span class="tag">HTML exam</span>':`<span class="tag">${e.q.length} questions</span>`}<div style="margin-top:8px">${a&&a.status=="done"?(e.type=="html"?`<b>✅ Completed</b> ${a.hasSnap?`<button class="g" onclick="viewSnap('${e.id}')">📄 View my result</button>`:""} <span class="mu">(an exam can be taken only once)</span>`:`<b>Score: ${a.score}/${e.q.length} (${a.pct}%)</b> <button class="g" onclick="review('${e.id}')">View detailed result</button>`):`<button onclick="startExam('${e.id}')">${a&&a.status=="started"?"Resume":"Start exam"}</button>`}${isAdmin?` <button class="r" onclick="delExam('${e.id}')">Delete</button>`:""}</div></div>`}).join(""):'<div class="card">No exams in this section yet.</div>'}
+
+/* ===== categories ===== */
+const SUB8=["English","Maths","Physics","Chemistry","Biology","Geography","History","Economics"],SUB9=["English","Maths","SAT","Physics","Chemistry","Biology","History","Geography","Economics"];
+const YR=(a,b)=>{const r=[];for(let y=a;y<=b;y++)r.push(String(y));return r},SEM=["Semester 1","Semester 2"],GR=["Grade 9","Grade 10","Grade 11","Grade 12"];
+const UN={"Grade 9":{Maths:9,Physics:7,Chemistry:5,Biology:6},"Grade 10":{Maths:7,Physics:6,Chemistry:6,Biology:6},"Grade 11":{Maths:8,Physics:7,Chemistry:6,Biology:6},"Grade 12":{Maths:5,Physics:5,Chemistry:5,Biology:6}};
+const CATS=[
+ {id:"model",name:"Model Exams",icon:"🏆",levels:[{k:"year",l:"Year",o:()=>YR(2015,2019)},{k:"model",l:"Model",o:()=>["Addis Ababa Model","Oromia Model","Debub Model","Amhara Model","Private Schools Model"]},{k:"sem",l:"Semester",o:()=>SEM},{k:"subject",l:"Subject",o:()=>SUB9}]},
+ {id:"mid",name:"Mid Exam & Worksheets",icon:"📝",levels:[{k:"year",l:"Year",o:()=>YR(2017,2019)},{k:"grade",l:"Grade",o:()=>GR},{k:"sem",l:"Semester",o:()=>SEM},{k:"subject",l:"Subject",o:()=>SUB8}]},
+ {id:"weekly",name:"Weekly Exams",icon:"🗓️",levels:[{k:"grade",l:"Grade",o:()=>GR},{k:"week",l:"Week",o:()=>Array.from({length:14},(_,i)=>"Week "+(i+1))},{k:"subject",l:"Subject",o:()=>SUB8},{k:"unit",l:"Unit",o:()=>Array.from({length:9},(_,i)=>"Unit "+(i+1))}]},
+ {id:"final",name:"Final Exams",icon:"🎓",levels:[{k:"grade",l:"Grade",o:()=>GR},{k:"year",l:"Year",o:()=>YR(2017,2019)},{k:"subject",l:"Subject",o:()=>SUB8}]},
+ {id:"pilot",name:"Pilot Exams",icon:"🧭",levels:[{k:"year",l:"Year",o:()=>YR(2016,2019)},{k:"subject",l:"Subject",o:()=>SUB9}]},
+ {id:"sat",name:"SAT Practice Exam",icon:"🎯",levels:[{k:"book",l:"Book",o:()=>["Extreme Book","Marvel Book","Fana Book"]},{k:"part",l:"Part",o:()=>["Maths part","English part"]},{k:"round",l:"Round",o:()=>Array.from({length:10},(_,i)=>"Round "+(i+1))}]},
+ {id:"euee",name:"EUEE",icon:"🚀",levels:[{k:"year",l:"Year",o:()=>YR(2005,2018)},{k:"round",l:"Round",o:s=>s[0]=="2018"?["Round 1","Round 2","Round 3"]:["Round 1"]},{k:"subject",l:"Subject",o:()=>SUB9}]},
+ {id:"stem",name:"STEM EUEE",icon:"🔬",levels:[{k:"year",l:"Year",o:()=>YR(2005,2018)},{k:"grade",l:"Grade",o:()=>GR},{k:"subject",l:"Subject",o:()=>["Maths","Physics","Chemistry","Biology"]},{k:"unit",l:"Unit",o:s=>Array.from({length:(UN[s[1]]||{})[s[2]]||1},(_,i)=>"Unit "+(i+1))}]}
+];
+const GRAD=["linear-gradient(135deg,#6366f1,#06b6d4)","linear-gradient(135deg,#ec4899,#f97316)","linear-gradient(135deg,#10b981,#06b6d4)","linear-gradient(135deg,#8b5cf6,#ec4899)","linear-gradient(135deg,#f59e0b,#ef4444)","linear-gradient(135deg,#0ea5e9,#6366f1)","linear-gradient(135deg,#14b8a6,#84cc16)","linear-gradient(135deg,#e11d48,#7c3aed)"];
+const SUBV={English:["💬",3],Maths:["📐",5],SAT:["🎯",7],Physics:["🧲",1],Chemistry:["🧪",2],Biology:["🧬",6],History:["🏛️",4],Geography:["🌍",0],Economics:["📈",5]};
+const KIC={year:"📅",model:"🏫",sem:"📘",grade:"🎒",week:"🗓️",unit:"📚",round:"🔁",book:"📖",part:"🧩"};
+const iconFor=(k,t,i)=>k=="subject"&&SUBV[t]?SUBV[t]:[KIC[k]||"📁",i];
+const catOf=id=>CATS.find(c=>c.id==id);
+let nav={cat:null,sel:[],opts:[]};
+const tile=(ic,t,sub,g,i)=>`<div class="tile" style="background:${g};animation-delay:${i*40}ms" onclick="navPick(${i})"><div class="ti">${ic}</div><div><div class="tl">${esc(t)}</div></div><div class="tc">${sub}</div></div>`;
+const crumb=tr=>`<div class="card" style="padding:10px"><button class="g" onclick="navBack()">← Back</button> <span class="mu">${tr.map(esc).join(" › ")}</span></div>`;
+function navPick(i){const o=nav.opts[i];if(nav.cat==null)nav.cat=o.v;else nav.sel.push(o.v);examsV()}
+function navBack(){if(nav.sel.length)nav.sel.pop();else nav.cat=null;examsV()}
+const examMatch=(e,sel,C)=>e.cat==C.id&&sel.every((v,i)=>e.path&&e.path[C.levels[i].k]==v);
+const cntTxt=n=>n+" exam"+(n==1?"":"s");
+function examsV(){const V=$("#v");
+ if(nav.cat==null){const opts=CATS.map(c=>({v:c.id,t:c.name,ic:c.icon,n:exams.filter(e=>e.cat==c.id).length}));
+  const oth=exams.filter(e=>!e.cat).length;if(oth)opts.push({v:"other",t:"Other Exams",ic:"📂",n:oth});
+  nav.opts=opts;V.innerHTML=`<h3 style="margin:4px 4px 10px">📚 Choose a category</h3><div class="tg">${opts.map((o,i)=>tile(o.ic,o.t,cntTxt(o.n),GRAD[i%GRAD.length],i)).join("")}</div>`;return}
+ if(nav.cat=="other"){V.innerHTML=crumb(["Other Exams"])+examCards(exams.filter(e=>!e.cat));return}
+ const C=catOf(nav.cat),d=nav.sel.length,trail=[C.name,...nav.sel];
+ if(d>=C.levels.length){V.innerHTML=crumb(trail)+examCards(exams.filter(e=>examMatch(e,nav.sel,C)));return}
+ const L=C.levels[d];nav.opts=L.o(nav.sel).map(v=>({v,t:v,n:exams.filter(e=>examMatch(e,[...nav.sel,v],C)).length}));
+ V.innerHTML=crumb(trail)+`<h3 style="margin:4px 4px 10px">Select ${L.l}</h3><div class="tg">${nav.opts.map((o,i)=>{const[ic,gi]=iconFor(L.k,o.t,i);return tile(ic,o.t,cntTxt(o.n),GRAD[gi%GRAD.length],i)}).join("")}</div>`}
+function admLv(from){const c=catOf($("#xc").value);
+ if(from===undefined){$("#xl").innerHTML=c.levels.map((l,i)=>`<div class="mu">${l.l}</div><select id="xl${i}" onchange="admLv(${i+1})"></select>`).join("");from=0}
+ const sel=[];for(let i=0;i<c.levels.length;i++){const el=$("#xl"+i);if(i>=from){const cur=el.value,v=c.levels[i].o(sel);el.innerHTML=v.map(x=>`<option>${esc(x)}</option>`).join("");if(v.includes(cur))el.value=cur}sel.push(el.value)}}
+function pathSel(){const c=catOf($("#xc").value),path={};c.levels.forEach((l,i)=>path[l.k]=$("#xl"+i).value);return{c,path}}
+const delExam=id=>confirm("Delete this exam?")&&Promise.all([db.collection("exams").doc(id).delete(),db.collection("examhtml").doc(id).delete().catch(()=>0)]);
+
+/* exam taking */
+const attRef=id=>db.collection("attempts/"+uid+"/items").doc(id);
+const FR='<iframe id="fx" sandbox="allow-scripts allow-same-origin allow-forms allow-modals" style="width:100%;height:calc(100vh - 110px);min-height:480px;border:0;background:#fff;border-radius:12px"></iframe>';
+async function getHtml(e){if(e.html)return e.html;const d=await db.collection("examhtml").doc(e.id).get();if(!d.exists)throw new Error("Exam file not found");return d.data().html}
+async function startHtml(e,old){let h;try{h=await getHtml(e)}catch(x){return alert("Could not load the exam: "+x.message)}
+ if(old&&old.status=="started"){live={e,html:true,end:old.end,src:h};return drawHtml(true)}
+ if(!confirm(`Start "${e.title}"?\nTime: ${e.minutes} min.\nLeaving the page, switching apps or taking a screenshot will SUBMIT the exam automatically.`))return;
+ const end=Date.now()+e.minutes*60000;
+ await attRef(e.id).set({status:"started",end});
+ live={e,html:true,end,src:h};drawHtml(false);arm()}
+function drawHtml(resume){const{e}=live;
+ app.innerHTML=`<div id="timer">--:--</div><div id="hb"></div>${FR}<p id="sb"><button onclick="confirm('Submit now?')&&finish('Submitted.')">Submit exam</button></p>`;
+ const fx=$("#fx");if(resume)fx.onload=()=>setTimeout(()=>finishHtml("You left the exam earlier, so it was auto-submitted."),500);
+ fx.srcdoc=live.src;
+ tick=setInterval(()=>{const r=live?live.end-Date.now():0;if(r<=0)return finishHtml("Time is up — auto-submitted.");const s=Math.floor(r/1e3);$("#timer").textContent=`Time left ${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`},500)}
+function trySubmit(fx){const w=fx.contentWindow,d=w.document;w.confirm=()=>true;
+ for(const n of ["submitExam","submitQuiz","finishExam","finishQuiz","submitTest","gradeExam","checkAnswers","submit","finish"]){if(typeof w[n]=="function"){try{w[n]();return true}catch(x){}}}
+ const b=[...d.querySelectorAll("button,input[type=button],input[type=submit],a")].find(x=>/submit|finish|check|grade|result|dhiyeessi|xumur/i.test((x.textContent||"")+(x.value||"")));
+ if(b){b.click();return true}return false}
+async function finishHtml(msg){if(!live)return;const{e}=live;live=null;hold=true;clearInterval(tick);
+ const fx=$("#fx");let ok=false;try{ok=trySubmit(fx)}catch(x){}
+ try{await attRef(e.id).set({status:"done",html:true,at:Date.now()})}catch(x){}
+ attempts[e.id]={status:"done",html:true};
+ const t=$("#timer");if(t)t.remove();const sb=$("#sb");if(sb)sb.remove();
+ const hb=$("#hb");if(hb)hb.innerHTML=`<div class="card">${esc(msg)}${ok?"":" If the results are not shown below, press the exam's own Submit button."} <button onclick="hold=false;tab='exams';render()">Back to exams</button></div>`;
+ setTimeout(async()=>{let r=null;try{r=extractScore(fx)}catch(x){}
+  let sn=null;try{const h="<!DOCTYPE html>"+fx.contentDocument.documentElement.outerHTML.replace(/<script[\s\S]*?<\/script>/gi,"");if(h.length<900000)sn=h}catch(x){}
+  if(sn){try{await db.collection("snaps/"+uid+"/items").doc(e.id).set({html:sn,at:Date.now()})}catch(x){sn=null}}
+  if(r||sn){const rec={status:"done",html:true,at:Date.now(),hasSnap:!!sn,...(r||{})};try{await attRef(e.id).set(rec)}catch(x){}attempts[e.id]=rec}
+  pushBoard()},1800)}
+async function viewSnap(id){try{const d=await db.collection("snaps/"+uid+"/items").doc(id).get();if(!d.exists)return alert("Result not found.");
+ hold=true;app.innerHTML=`<p><button onclick="hold=false;render()">← Back</button></p><iframe id="fx" sandbox="" style="width:100%;height:calc(100vh - 110px);min-height:480px;border:0;background:#fff;border-radius:12px"></iframe>`;$("#fx").srcdoc=d.data().html}catch(e){alert("Could not load the result: "+e.message)}}
+function extractScore(fx){const t=(fx.contentDocument.body.innerText||"").replace(/\s+/g," ");
+ let m=t.match(/(?:score|result|marks?|total|correct)[^0-9]{0,25}(\d+(?:\.\d+)?)\s*(?:\/|out of|of)\s*(\d+)/i);
+ if(m&&+m[2]>0&&+m[1]<=+m[2])return{score:+m[1],total:+m[2],pct:Math.round(+m[1]/+m[2]*1000)/10};
+ m=t.match(/(?:score|result|percentage|marks?)[^0-9]{0,25}(\d+(?:\.\d+)?)\s*%/i);
+ if(m&&+m[1]<=100)return{pct:+m[1]};
+ const g=w=>{const a=t.match(new RegExp("(?:"+w+")\\s*[:=\\-]\\s*(\\d+)","i"))||t.match(new RegExp("(\\d+)\\s*(?:"+w+")","i"));return a?+a[1]:null};
+ const ok=g("correct|right"),no=g("wrong|incorrect")||0,sk=g("unanswered|skipped|not answered")||0;
+ if(ok!==null&&ok+no+sk>0)return{score:ok,total:ok+no+sk,pct:Math.round(ok/(ok+no+sk)*1000)/10}
+ return null}
+async function startExam(id){
+ const e=exams.find(x=>x.id==id);if(!e)return;
+ let old=null;try{const sn=await attRef(id).get();old=sn.exists?sn.data():null}catch(x){return alert("Could not check your attempt. Check your internet and try again.")}
+ if(old&&old.status=="done")return alert("You have already taken this exam. An exam can be taken only once.");
+ if(e.type=="html")return startHtml(e,old);
+ if(old&&old.status=="started"){let la={};try{la=JSON.parse(localStorage.getItem("ans_"+uid+"_"+id)||"{}")}catch(x){}live={e,ans:la,end:old.end};return finish("Returned to the exam page — auto-submitted.")}
+ if(!confirm(`Start "${e.title}"?\nTime: ${e.minutes} min.\nLeaving the page, switching apps or taking a screenshot will SUBMIT the exam automatically.`))return;
+ const end=Date.now()+e.minutes*60000;
+ await attRef(id).set({status:"started",end});
+ live={e,ans:{},end};drawLive();arm()}
+function drawLive(){const{e}=live;
+ app.innerHTML=`<div id="timer">--:--</div><div class="card nosel"><h3>${esc(e.title)}</h3><span class="tag">${esc(e.subject)}</span></div>`+
+ e.q.map((q,i)=>`<div class="card nosel"><b>${i+1}. ${esc(q.t)}</b>${q.o.map((o,j)=>`<label class="opt ${live.ans[i]===j?"sel":""}" onclick="pick(${i},${j})">${"ABCDEFGH"[j]}) ${esc(o)}</label>`).join("")}</div>`).join("")+
+ `<button onclick="confirm('Submit now?')&&finish('Submitted.')">Submit exam</button>`;
+ tick=setInterval(()=>{const r=live.end-Date.now();if(r<=0)return finish("Time is up — auto-submitted.");const s=Math.floor(r/1e3);$("#timer").textContent=`Time left ${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`},500)}
+let sv;function pick(i,j){live.ans[i]=j;const st=window.scrollY;drawLive();scrollTo(0,st);try{localStorage.setItem("ans_"+uid+"_"+live.e.id,JSON.stringify(live.ans))}catch(x){}}
+const bad=()=>live&&finish("Leaving the exam page / screenshot detected — auto-submitted.");
+function arm(){
+ document.addEventListener("visibilitychange",()=>document.hidden&&bad());
+ addEventListener("blur",()=>{if(live&&live.html&&document.activeElement&&document.activeElement.id=="fx")return;bad()});addEventListener("pagehide",bad);
+ addEventListener("keyup",k=>{if(k.key=="PrintScreen"||(k.shiftKey&&(k.metaKey||k.key=="Meta")&&["s","S","3","4","5"].includes(k.key)))bad()});
+ addEventListener("keydown",k=>{if(k.key=="PrintScreen"||(k.shiftKey&&k.metaKey))bad()});
+ ["contextmenu","copy","cut","paste","dragstart"].forEach(t=>document.addEventListener(t,x=>live&&x.preventDefault()))}
+async function finish(msg){
+ if(!live)return;if(live.html)return finishHtml(msg);const{e,ans}=live;live=null;clearInterval(tick);
+ let sc=0;e.q.forEach((q,i)=>{if(ans[i]===q.a)sc++});const pct=Math.round(sc/e.q.length*100);
+ try{await attRef(e.id).set({status:"done",ans,score:sc,pct,at:Date.now()})}catch(x){}
+ attempts[e.id]={status:"done",ans,score:sc,pct,at:Date.now()};pushBoard();tab="exams";alert(msg);review(e.id)}
+function review(id){const e=exams.find(x=>x.id==id),a=attempts[id];if(!e||!a)return;tab="exams";render();
+ $("#v").innerHTML=`<div class="card"><h2>${esc(e.title)} — Result</h2><h2>${a.score}/${e.q.length} (${a.pct}%)</h2><button class="g" onclick="render()">Back</button></div>`+
+ e.q.map((q,i)=>{const u=(a.ans||{})[i];return`<div class="card"><b>${i+1}. ${esc(q.t)}</b>${q.o.map((o,j)=>`<div class="opt ${j===q.a?"ok":j===u?"no":""}">${"ABCDEFGH"[j]}) ${esc(o)}${j===u?" ← your answer":""}${j===q.a?" ✓":""}</div>`).join("")}<div class="mu">${u==null?"Not answered. ":""}<b>Explanation:</b> ${esc(q.x||"No explanation provided.")}</div></div>`}).join("")}
+
+/* admin */
+function parse(txt){const out=[];try{let j=JSON.parse(txt);j=Array.isArray(j)?j:j.q||j.questions||[];return j.map(x=>({t:x.t||x.question||"",o:x.o||x.options||[],a:typeof(x.a??x.answer)=="string"?"ABCDEFGH".indexOf((x.a??x.answer).toUpperCase()):(x.a??x.answer),x:x.x||x.explanation||""})).filter(q=>q.t&&q.o.length>1&&q.a>=0)}catch(e){}txt.split(/\n\s*\n/).forEach(b=>{const L=b.trim().split("\n").map(s=>s.trim()).filter(Boolean);if(L.length<4)return;
+ const q={t:"",o:[],a:-1,x:""};L.forEach(l=>{let m;
+  if(m=l.match(/^(?:Q\d*[:.)]|\d+[.)])\s*(.*)/i))q.t=m[1];
+  else if(m=l.match(/^([A-H])[.)]\s*(.*)/i))q.o.push(m[2]);
+  else if(m=l.match(/^Answer\s*[:\-]\s*([A-H])/i))q.a="ABCDEFGH".indexOf(m[1].toUpperCase());
+  else if(m=l.match(/^Explain(?:ation)?\s*[:\-]\s*(.*)/i))q.x=m[1];
+  else if(!q.o.length)q.t+=" "+l;else q.x+=" "+l});
+ if(q.t&&q.o.length>1&&q.a>=0)out.push(q)});return out}
+function admin(){
+ STU=[...reqs].sort((x,y)=>(x.status=="pending"?0:1)-(y.status=="pending"?0:1)||String(x.name).localeCompare(String(y.name)));const pd=STU.filter(r=>r.status=="pending").length;
+ $("#v").innerHTML=`<div class="card"><h3>👥 Students (${STU.length}) ${pd?`<span class="tag" style="background:#fee2e2;color:#b91c1c">${pd} pending</span>`:""}</h3>${STU.map((r,i)=>`<div style="border-top:1px solid var(--bd);padding:10px 0"><b>${esc(r.name)}</b> <span class="tag">${r.status=="pending"?"⏳ Pending":"✅ Approved"}</span><div class="mu">${esc(r.email)}<br>Grade ${esc(r.grade)}-${esc(r.section)} · Sem1 ${esc(r.sem1??"-")}% · Sem2 ${esc(r.sem2??"-")}%${r.target?" · UEE target "+esc(r.target):""}<br>🔑 Password: <b style="font-family:monospace">${esc(r.pass||"—")}</b></div><div style="margin-top:6px">${r.status=="pending"?`<button onclick="approveStu(${i})">Approve</button> `:""}<button class="r" onclick="delStu(${i})">Delete</button></div></div>`).join("")||'<span class="mu">No students registered yet.</span>'}</div>
+ <div class="card"><h3>Upload a new exam</h3><input id="et" placeholder="Exam title (e.g. Oromia Model 2019)"><div class="mu">Category</div><select id="xc" onchange="admLv()">${CATS.map(c=>`<option value="${c.id}">${c.icon} ${c.name}</option>`).join("")}</select><div id="xl"></div><input id="em" type="number" placeholder="Allowed time (minutes)">
+ <div class="mu">Format — separate questions with a blank line:<br>Q1: Question text<br>A) option<br>B) option<br>C) option<br>D) option<br>Answer: B<br>Explanation: why B is right</div>
+ <div class="drop" ondragover="event.preventDefault()" ondrop="event.preventDefault();rd(event.dataTransfer.files[0])"><big>📂</big><b>Choose file (HTML exam / PDF / text)</b><input id="ef" type="file" accept=".html,.htm,.pdf,.txt,.md,.csv,.json,text/html,application/pdf,text/plain" onchange="rd(this.files[0])" style="display:block;margin:10px 0 0;width:100%"><div class="mu">Tap the button above, then select your exam file.</div></div><div id="fi" class="mu"></div><textarea id="eq" rows="8" placeholder="…or paste questions here" oninput="pv()"></textarea><div id="pvw" class="mu"></div><button onclick="addExam()">Publish exam</button></div>`;admLv()}
+let STU=[];
+const approveStu=i=>db.collection("requests").doc(STU[i].id).update({status:"approved"}).catch(e=>alert("Failed: "+e.message));
+async function delStu(i){const r=STU[i];if(!r||!confirm("Delete "+r.name+" and ALL their information (profile, results, ranking)?\nThis cannot be undone."))return;
+ try{for(const c of ["attempts/"+r.id+"/items","snaps/"+r.id+"/items"]){const q=await db.collection(c).get();await Promise.all(q.docs.map(d=>d.ref.delete()))}
+  await db.collection("board").doc(r.id).delete();await db.collection("requests").doc(r.id).delete();resetBoard();alert("Student deleted.")}catch(e){alert("Delete failed: "+e.message)}}
+const appr=(id,ok)=>db.collection("approved").doc(id).set({ok,at:Date.now()}).then(()=>alert(ok?"Approved.":"Blocked."));
+let PQ=[],HTMLEXAM=null,hold=false;
+async function pdfText(f){const pdf=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;let out="";
+ for(let i=1;i<=pdf.numPages;i++){const c=await(await pdf.getPage(i)).getTextContent();let y=null,line="";
+  c.items.forEach(t=>{const yy=Math.round(t.transform[5]);if(y!==null&&Math.abs(yy-y)>3){out+=line.trim()+"\n";line=""}y=yy;line+=t.str+" "});out+=line.trim()+"\n"}return out}
+async function rd(f){if(!f)return;$("#fi").textContent="⏳ Reading "+f.name+" …";
+ try{if(/\.html?$/i.test(f.name)){const h=await f.text();if(h.length>900000)return $("#fi").textContent="⚠️ HTML file is too large (maximum about 900 KB).";
+  HTMLEXAM=h;PQ=[];$("#eq").value="";$("#pvw").innerHTML="🌐 <b>HTML exam detected</b> ("+Math.round(h.length/1024)+" KB). The answers and explanations inside the file will be used. Fill the title, subject and time, then press <b>Publish exam</b>.";return $("#fi").textContent="📄 "+f.name}
+  const t=/\.pdf$/i.test(f.name)?await pdfText(f):await f.text();
+  if(t.trim().length<20)return $("#fi").textContent="⚠️ No text found. This PDF may be a scanned image — use a text-based PDF.";
+  $("#eq").value=t;$("#fi").textContent="📄 "+f.name+" ("+t.length+" characters read)";pv();if(!PQ.length)$("#pvw").innerHTML="⚠️ File was read but no questions were recognised. Text starts with:<pre style=\"white-space:pre-wrap\">"+esc(t.slice(0,400))+"</pre>Questions must look like “1. Question … A. … B. … C. … D. …” and have an Answer Key."}catch(e){$("#fi").textContent="⚠️ Could not read this file ("+(e.message||e)+"). Check your internet connection and try again."}}
+function parseLoose(txt){let key={},body=txt,ki=-1,m,re=/\n\s*(answer\s*keys?|answers|key)\s*[:\n]/gi;
+ while(m=re.exec(txt))ki=m.index;
+ if(ki>0){const kt=txt.slice(ki),pr=[...kt.matchAll(/(\d{1,3})\s*[-.:)]*\s*([A-D])\b/gi)];if(pr.length>=3){pr.forEach(x=>key[+x[1]]="ABCD".indexOf(x[2].toUpperCase()));body=txt.slice(0,ki)}}
+ const out=[];const chunks=body.split(/\n\s*(?=\d{1,3}[.)]\s)/).filter(c=>{const pr=[...c.matchAll(/(\d{1,3})\s*[.):\-]\s*([A-D])(?=\s|$)/g)];if(pr.length>=5){pr.forEach(x=>key[+x[1]]="ABCD".indexOf(x[2]));return false}return true});
+ chunks.forEach(c=>{const mm=c.trim().match(/^(\d{1,3})[.)]\s*([\s\S]*)/);if(!mm)return;
+  let r=mm[2].replace(/\s*\n\s*/g," "),ans=-1,x="",e;
+  if(e=r.match(/Explanation\s*[:\-]\s*(.*)$/i)){x=e[1];r=r.slice(0,e.index)}
+  if(e=r.match(/Answer\s*[:\-]\s*([A-D])\b/i)){ans="ABCD".indexOf(e[1].toUpperCase());r=r.slice(0,e.index)}
+  const pt=r.split(/\s*\(?\b([A-D])[.)]\s+/);if(pt.length<5)return;
+  const o=[];for(let i=1;i<pt.length;i+=2)o.push((pt[i+1]||"").trim());
+  out.push({n:+mm[1],t:pt[0].trim(),o,a:ans,x})});out.forEach(q=>{if(key[q.n]!==undefined&&q.a<0)q.a=key[q.n]});return out.filter(q=>q.t.length>8)}
+function pv(){HTMLEXAM=null;let q=parse($("#eq").value);if(!q.length)q=parseLoose($("#eq").value);PQ=q;drawPv()}
+function drawPv(){const q=PQ,miss=q.filter(x=>x.a<0).length;
+ $("#pvw").innerHTML=q.length?`✅ <b>${q.length}</b> questions detected. ${miss?`⚠️ ${miss} need a correct answer — choose below (or remove with ✕):`:"All answers found."}`+q.map((x,i)=>`<div style="border-top:1px solid var(--bd);padding:6px 0">${i+1}. ${esc(x.t.slice(0,90))} <select style="width:auto" onchange="PQ[${i}].a=+this.value"><option value="-1">Answer?</option>${x.o.map((_,j)=>`<option value="${j}" ${x.a===j?"selected":""}>${"ABCDEFGH"[j]}</option>`).join("")}</select> <button class="g" style="padding:4px 10px" onclick="PQ.splice(${i},1);drawPv()">✕</button></div>`).join(""):"⚠️ No valid questions detected yet"}
+async function addExam(){const PS=pathSel(),q=PQ,t=$("#et").value.trim(),s=PS.path.subject||PS.path.part||"General",m=+$("#em").value;
+ if(!t||!s||!(m>0))return alert("Please fill the exam title and allowed time (minutes).");
+ if(HTMLEXAM){try{const xid="x"+Date.now();await db.collection("examhtml").doc(xid).set({html:HTMLEXAM});await db.collection("exams").doc(xid).set({cat:PS.c.id,path:PS.path,title:t,subject:s,minutes:m,type:"html",q:[],at:Date.now()});HTMLEXAM=null;alert("HTML exam published.");tab="exams";return render()}catch(e){return alert("Could not publish: "+e.message)}}
+ if(!q.length)return alert("No questions yet. Tap “Choose file”, select your PDF/text file, and wait until you see “✅ questions detected” — then press Publish.");
+ const ms=q.map((x,i)=>x.a<0?i+1:0).filter(Boolean);
+ if(ms.length){if(!confirm("Question(s) "+ms.join(", ")+" have no correct answer chosen.\nPublish WITHOUT these questions?"))return;PQ=q.filter(x=>x.a>=0)}
+ if(!PQ.length)return alert("No question has an answer.");
+ await db.collection("exams").doc("x"+Date.now()).set({cat:PS.c.id,path:PS.path,title:t,subject:s,minutes:m,q:PQ.map(({t,o,a,x})=>({t,o,a,x})),at:Date.now()});alert(PQ.length+" questions published.");tab="exams";render()}
+boot();
+</script>
+</body></html>
